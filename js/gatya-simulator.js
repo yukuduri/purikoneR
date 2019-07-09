@@ -113,9 +113,10 @@ const simulate= () => {
         usr = usr.replace(/[‪#＃‬]/g,'♯');  //ハッシュタグ含有によるエラー回避
         resultText+=usr+'さんの'
       }
-      resultText+='ガチャ結果】';
+      resultText+='ガチャ結果:';
       //カラ鉄'19夏
       if(event=karatetu19s){
+        resultText+='カラ鉄\'19夏】';
         //itemSelect
         if(itemName=='コースター(前半)'){
           gatyaAry = charaCoasterFirst;
@@ -213,6 +214,6 @@ function copyText(){
 
 function tweet(){
   result=document.result.result_text.value;
-  url="http://twitter.com/share?text="+result+"%0a&hashtags=プリコネR ガチャシミュレータ&url=https://yukuduri.github.io/purikoneR/gatya";
+  url="http://twitter.com/share?text="+result+"%0a&hashtags=プリコネRガチャシミュレータ&url=https://yukuduri.github.io/purikoneR/gatya";
   window.open(url);
 }
