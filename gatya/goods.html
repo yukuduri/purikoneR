@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
+    <meta name="description" content="プリコネR関連グッズのガチャシミュレータです。">
+    <title>プリコネRグッズガチャシミューレータ</title> 
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jquery-1.7.2.min.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/purl.js"></script>
+    <script src="../js/gatya-simulator.js"></script>
+  </head>
+
+  <body>
+    <noscript><section class="item footer"><h1 class="heading">このサイトの正常な表示・動作には、JavaScriptが必要です。<br>JavaScript対応のブラウザで、JavaScriptを有効にしてから再度アクセスしてください。<br>©2019 yukuduri</h1></section></noscript>
+    <header class="item header">
+      <h1 class="heading">プリコネRグッズガチャシミューレータv1.0</h1>
+    </header>
+    
+    <section class="item gatya">
+      <br>
+      <form name="simulator" action="#">
+        
+        <h3 class="discliption">選択されているガチャ：</h3>
+        <h1 class=event id=gatya>選択されていません</h1>
+        <input type="button" value="ガチャ選択に戻る" onClick="back()">
+        <br>※下記入力内容は保存されません<br><br>
+        <input type="text" name="usrName" placeholder="ユーザー名(任意)"><br>※未記入でも問題ありません
+        <div id="selectItemArea">
+          <h3 class="discliption">欲しいアイテムを選択</h3>
+          <select name="itemName">
+            <option value="NULL">[!]ガチャが未選択です[!]</option>
+          </select>
+        </div>
+        <div id="selectCharaArea"><br>
+        </div>
+        <h3 class="discliption">オプションを選択</h3>
+        <select name="gatya_option" id="gatya_option">
+          <option value="NULL">--選択してください--</option>
+          <option value="time1">1回引く</option>
+          <option value="time10">10回引く</option>
+          <option value="chara">欲しいキャラが出るまで引く</option>
+          <option value="charaNUM">推しが指定数、出るまで引く</option>
+        </select><br>
+        <div id="selectOptionArea"></div>
+        <br><br>
+        <input type="button" value="結果表示" onClick="simulate()">
+      </form>
+      <br><hr><br>
+      <form name="result" action="#">
+        <textarea name="result_text" id="result" rows="6" cols="30" placeholder="「結果表示」を押すとここに結果が表示されます" ></textarea>
+        <br>
+        <input type="button" value="クリップボードにコピー" onClick="copyText()">
+        <input type="button" value="ツイートする" onClick="tweet()">
+        <p class="discliption" id="attentionMSG"></p>
+      </form>
+    </section>
+    
+    <section class="item footer">
+      <script>LastUpdate();</script>
+      <p class="discliption">©2019 yukuduri</p>
+      <hr>
+      <p class="heading">当サイト運営のためのご支援、よろしくおねがいします。</p>
+      <p class="discliption">サイト運営存続のため、<a target="_blank" href="https://www.amazon.co.jp/?&_encoding=UTF8&tag=yukuduri-22&linkCode=ur2&linkId=7210b0ce4406067ddbdc1018de915954&camp=247&creative=1211">こちら</a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=yukuduri-22&l=ur2&o=9" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />からAmazonでお買い物していただくだけでサイト運営の支えになります。</p>
+      <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=amazonstudent&banner=1EM0SD0ZY5VN3ZQRPA82&f=ifr&linkID=f10625b448c0cce5e3b0cd0910bee12a&t=yukuduri-22&tracking_id=yukuduri-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+      <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=prime&banner=1JDEH56FFMMBANKKEJR2&f=ifr&linkID=be6185331ac04d28b3d75d935f8c9ab3&t=yukuduri-22&tracking_id=yukuduri-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+      <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ez&f=ifr&linkID=d3bea0e13ac54469d9572a6828bcd52e&t=yukuduri-22&tracking_id=yukuduri-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+      <iframe src="https://rcm-fe.amazon-adsystem.com/e/cm?o=9&p=12&l=ur1&category=gift_certificates&banner=1TJ8XM5YGJR5WC15P202&f=ifr&linkID=a82f65b234bb2906ca8c4cb31dd2e6fe&t=yukuduri-22&tracking_id=yukuduri-22" width="300" height="250" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+.item {
+  width: 100%;
+  padding:10px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.header {
+  background-color: aqua;
+}
+
+.gatya {
+  background-color: aquamarine;
+}
+
+.heading {
+  font-family: "M PLUS 1p";
+}
+
+.discliption {
+  font-family: "Sawarabi Mincho";
+}
+
+.footer {
+  background-color: cadetblue;
+}
+
+.event {
+  padding: 5px;
+  margin: 10px;
+  border: solid;
+  border-color: cadetblue;
+  background-color: #fff;
+}
